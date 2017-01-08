@@ -40,8 +40,19 @@ rainbow-bdr()
 body
 	font-family 'comic sans ms' !important
 	font-size 16px
-	// rainbow-bdr()
+	rainbow-bdr()
+	rainbow()
 	height 100vh
+	text-shadow: 	-10px 10px 0px alpha(#000, 0.1),
+					-20px 20px 0px alpha(#000, 0.1),
+					-30px 30px 0px alpha(#000, 0.1),
+					-40px 40px 0px alpha(#000, 0.1)
+
+	background-image -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
+	background-image gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
+	color transparent
+	-webkit-background-clip text
+	background-clip text
 
 .main-wrapper
 	text-align center
