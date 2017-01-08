@@ -1,0 +1,69 @@
+// CONFIG
+$scrollbar-disable = true
+
+// colors
+$secondary-color = #000
+
+$main-color = #f33
+
+$selection-color = alpha(#bdbdbd, 0.6)
+
+@import 'config'
+@import 'fonts'
+
+// bootstrap4 @media definitions for easy responsiveness
+sm = "screen and (min-width: 544px)"
+md = "screen and (min-width: 768px)"
+lg = "screen and (min-width: 992px)"
+xl = "screen and (min-width: 1200px)"
+
+rainbow()
+	background-image -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
+	background-image gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
+	color transparent
+	-webkit-background-clip text
+	background-clip text
+
+.rainbow
+	rainbow()
+
+@-webkit-keyframes rainbow
+	0%
+		border-color hsl(0, 100%, 50%)
+	100%
+		border-color hsl(255, 100%, 50%)
+
+rainbow-bdr()
+	border 15px solid hsl(0, 100%, 50%)
+	-webkit-animation rainbow .5s infinite alternate
+
+body
+	font-family 'comic sans ms' !important
+	font-size 16px
+	// rainbow-bdr()
+	height 100vh
+
+.main-wrapper
+	text-align center
+	width 100%
+	& h1
+		text-align center
+		font-size 3em
+		@media sm
+			font-size 4em
+		@media md
+			font-size 5.5em
+		@media lg
+			font-size 7em
+		@media xl
+			font-size 8em
+
+
+
+.controls
+	margin 15% 0
+	& .left
+		float left
+	& .right
+		float right
+
