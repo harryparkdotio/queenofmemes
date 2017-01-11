@@ -5,6 +5,7 @@ $left = $('#left');
 $left.css({"cursor":"pointer"});
 $left.click(function() {
   prevMeme();
+  getMeme();
 });
 
 $right = $('#right');
@@ -12,6 +13,7 @@ $right = $('#right');
 $right.css({"cursor":"pointer"});
 $right.click(function() {
   nextMeme();
+  getMeme();
 });
 
 $(function() {

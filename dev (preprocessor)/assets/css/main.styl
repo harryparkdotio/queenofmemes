@@ -33,9 +33,22 @@ rainbow()
 	100%
 		border-color hsl(255, 100%, 50%)
 
+@-webkit-keyframes rainbow-flash
+	0%
+		color #ff0000
+	100%
+		color hsl(255, 100%, 50%)
+
+$animt = 5s
+
 rainbow-bdr()
 	border 15px solid hsl(0, 100%, 50%)
-	-webkit-animation rainbow .5s infinite alternate
+	-webkit-animation rainbow $animt infinite alternate
+
+.rainbow-flash
+	rainbow()
+	color hsl(0, 100%, 50%)
+	-webkit-animation rainbow-flash $animt infinite alternate
 
 body
 	font-family 'comic sans ms' !important
