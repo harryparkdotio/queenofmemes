@@ -17,55 +17,67 @@ md = "screen and (min-width: 768px)"
 lg = "screen and (min-width: 992px)"
 xl = "screen and (min-width: 1200px)"
 
-rainbow()
-	background-image -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
-	background-image gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
-	color transparent
-	-webkit-background-clip text
-	background-clip text
+@keyframes rainbow-flash {
+    0%   {color:red; border-color:red;        }
+    10%  {color:orange; border-color:orange;     }
+    20%  {color:gold; border-color:gold;       }
+    30%  {color:yellow; border-color:yellow;     }
+    40%  {color:yellowgreen; border-color:yellowgreen;}
+    50%  {color:green; border-color:green;      }
+    60%  {color:cyan; border-color:cyan;       }
+    70%  {color:blue; border-color:blue;       }
+    80%  {color:violet; border-color:violet;     }
+    90%  {color:magenta; border-color:magenta;    }
+    100% {color:indigo; border-color:indigo;     }
+}
 
-.rainbow
-	rainbow()
-
-@-webkit-keyframes rainbow
-	0%
-		border-color hsl(0, 100%, 50%)
-	100%
-		border-color hsl(255, 100%, 50%)
-
-@-webkit-keyframes rainbow-flash
-	0%
-		color #ff0000
-	100%
-		color hsl(255, 100%, 50%)
-
-$animt = 5s
+$animt = .25s
 
 rainbow-bdr()
-	border 15px solid hsl(0, 100%, 50%)
-	-webkit-animation rainbow $animt infinite alternate
+	border 15px solid
+	animation-name rainbow-flash
+	animation-duration $animt
+	animation-iteration-count infinite
+	animation-direction alternate
 
 .rainbow-flash
-	rainbow()
-	color hsl(0, 100%, 50%)
-	-webkit-animation rainbow-flash $animt infinite alternate
+	animation-name rainbow-flash
+	animation-duration $animt
+	animation-iteration-count infinite
+	animation-direction alternate
+
+.rainbow-flash.offset-1
+	animation-duration $animt * 0.7
+
+.rainbow-flash.offset-2
+	animation-duration $animt * 1.3
+
+
+
+@keyframes rainbowbg {
+	0%{background-position:0% 53%}
+	50%{background-position:100% 48%}
+	100%{background-position:0% 53%}
+}
+
+$bg-anim-t = .5s
 
 body
+	background: linear-gradient(72deg, #ff2222, #ff22ff, #2222ff, #22ffff, #22ff22, #22ff22, #ffff22, #ff2222);
 	font-family 'comic sans ms' !important
 	font-size 16px
-	rainbow-bdr()
-	rainbow()
+	background-size: 1600% 1600%;
+	-webkit-animation: rainbowbg $bg-anim-t ease infinite;
+	-moz-animation: rainbowbg $bg-anim-t ease infinite;
+	animation: rainbowbg $bg-anim-t ease infinite;
 	height 100vh
-	text-shadow: 	-10px 10px 0px alpha(#000, 0.1),
-					-20px 20px 0px alpha(#000, 0.1),
-					-30px 30px 0px alpha(#000, 0.1),
-					-40px 40px 0px alpha(#000, 0.1)
+	text-shadow: 	50px 50px 1px alpha(#000, 0.1),
+					-50px 50px 1px alpha(#000, 0.1),
+					-50px -50px 1px alpha(#000, 0.1),
+					50px -50px 1px alpha(#000, 0.1)
 
-	background-image -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
-	background-image gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22))
-	color transparent
-	-webkit-background-clip text
-	background-clip text
+
+
 
 .main-wrapper
 	text-align center
