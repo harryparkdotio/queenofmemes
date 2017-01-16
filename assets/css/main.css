@@ -216,20 +216,69 @@ input:-webkit-autofill:focus {
 }
 
 @-webkit-keyframes rainbow-flash {
-  0%   { color: #ffff00; } 
-  20%  { color: #ffcd00; }
-  40%  { color: #c3d74b; }
-  60%  { color: #c3d7d7; }
-  80%  { color: #ffc39b; }
-  100% { color: #ffff00; }
+    0%   {color:red;        }
+    10%  {color:orange;     }
+    20%  {color:gold;       }
+    30%  {color:yellow;     }
+    40%  {color:yellowgreen;}
+    50%  {color:green;      }
+    60%  {color:cyan;       }
+    70%  {color:blue;       }
+    80%  {color:violet;     }
+    90%  {color:magenta;    } 
+    100% {color:indigo;     }
 }
 @-moz-keyframes rainbow-flash {
-  0%   { color: #ffff00; } 
-  20%  { color: #ffcd00; }
-  40%  { color: #c3d74b; }
-  60%  { color: #c3d7d7; }
-  80%  { color: #ffc39b; }
-  100% { color: #ffff00; }
+    0%   {color:red;        }
+    10%  {color:orange;     }
+    20%  {color:gold;       }
+    30%  {color:yellow;     }
+    40%  {color:yellowgreen;}
+    50%  {color:green;      }
+    60%  {color:cyan;       }
+    70%  {color:blue;       }
+    80%  {color:violet;     }
+    90%  {color:magenta;    }
+    100% {color:indigo;     }
+}
+@-ms-keyframes rainbow-flash {
+    0%   {color:red;        }
+    10%  {color:orange;     }
+    20%  {color:gold;       }
+    30%  {color:yellow;     }
+    40%  {color:yellowgreen;}
+    50%  {color:green;      }
+    60%  {color:cyan;       }
+    70%  {color:blue;       }
+    80%  {color:violet;     }
+    90%  {color:magenta;    }
+    100% {color:indigo;     }
+}
+@-o-keyframes rainbow-flash {
+    0%   {color:red;        }
+    10%  {color:orange;     }
+    20%  {color:gold;       }
+    30%  {color:yellow;     }
+    40%  {color:yellowgreen;}
+    50%  {color:green;      }
+    60%  {color:cyan;       }
+    70%  {color:blue;       }
+    80%  {color:violet;     }
+    90%  {color:magenta;    }
+    100% {color:indigo;     }
+}
+@keyframes rainbow-flash {
+    0%   {color:red;        }
+    10%  {color:orange;     }
+    20%  {color:gold;       }
+    30%  {color:yellow;     }
+    40%  {color:yellowgreen;}
+    50%  {color:green;      }
+    60%  {color:cyan;       }
+    70%  {color:blue;       }
+    80%  {color:violet;     }
+    90%  {color:magenta;    }
+    100% {color:indigo;     }
 }
 
 body {
@@ -273,7 +322,7 @@ body {
 }
 
 .rainbow-epilepsy {
-    animation: rainbow-flash 5s infinite;
+    animation: rainbow-flash .3s infinite;
 }
 
 .controls {
