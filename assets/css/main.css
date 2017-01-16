@@ -272,6 +272,10 @@ body {
     }
 }
 
+.rainbow-epilepsy {
+    transition: rainbow-flash 5s infinite;
+}
+
 .controls {
     margin: 15% 0
 }
