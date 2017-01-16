@@ -273,7 +273,7 @@ body {
 }
 
 .rainbow-epilepsy {
-    transition: rainbow-flash 5s infinite;
+    animation: rainbow-flash 5s infinite;
 }
 
 .controls {
