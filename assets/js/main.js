@@ -4,22 +4,22 @@ $left = $('#left');
 
 $left.css({"cursor":"pointer"});
 $left.click(function() {
-  prevMeme();
-  getMeme();
+	prevMeme();
+	getMeme();
 });
 
 $right = $('#right');
 
 $right.css({"cursor":"pointer"});
 $right.click(function() {
-  nextMeme();
-  getMeme();
+	nextMeme();
+	getMeme();
 });
 
 $(function() {
-  $('a[href^="#static"]').bind('click', function(event) {
-    event.preventDefault();
-  });
+	$('a[href^="#static"]').bind('click', function(event) {
+		event.preventDefault();
+	});
 });
 
 function nextMeme() {
