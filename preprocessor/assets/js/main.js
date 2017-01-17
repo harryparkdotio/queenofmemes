@@ -1,9 +1,12 @@
 var currentMeme = 0;
 
+var audio = document.getElementById('audio');
+
 $left = $('#left');
 
 $left.css({"cursor":"pointer"});
 $left.click(function() {
+	audio.play();
 	prevMeme();
 	getMeme();
 });
@@ -12,6 +15,7 @@ $right = $('#right');
 
 $right.css({"cursor":"pointer"});
 $right.click(function() {
+	audio.play();
 	nextMeme();
 	getMeme();
 });
