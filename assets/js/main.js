@@ -40,3 +40,21 @@ function getMeme() {
 	console.log(currentMeme);
 	// return url;
 }
+
+
+
+
+
+
+
+
+
+var request = new XMLHttpRequest();
+var httpurl = '';
+request.open("GET", httpurl, true);
+
+request.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var data = JSON.parse(this.responseText);
+	}
+};
