@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+	head
+		//- meta
+		meta(charset='utf-8')
+
+		//- responsive
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+
+		//- site specific info
+		title queen of memes
+		meta(name='description', content='')
+		meta(name='author', content='')
+
+		//- styles
+		link(rel='stylesheet', href='assets/css/normalize.min.css')
+		link(rel='stylesheet', href='assets/css/bootstrap.min.css')
+		link(rel='stylesheet', href='assets/css/csshake.min.css')
+		link(rel='stylesheet', href='assets/css/main.css')
+
+		//- other resources
+		link(rel='shortcut icon', href='assets/images/favicon.jpg')
+
+	body
+		audio#audio(loop, autoplay)
+			source(src='assets/tunes/sandstorm.mp3')
+
+		.main-wrapper
+			h1
+				span.shake-constant.shake.shake-hard
+					span.rainbow-flash.offset-1 queenofmem.es
+			h2
+				span.shake-constant.shake
+					span.rainbow-flash.offset-2 meme tinder
+
+			h1
+				span.shake-constant.shake.shake-crazy
+					span.rainbow-flash epilepsy warning
+
+		.controls
+
+			a.left#left.nostylelink(href="#static")
+				span.shake-constant.shake.shake-crazy
+					svg(version="1.1", id="Layer_1", x="0px", y="0px", width="64px", height="64px", viewBox="0 0 64 64", enable-background="new 0 0 64 64")
+						g
+							polyline(fill="none", stroke="#000000", stroke-width="2", stroke-linejoin="bevel", stroke-miterlimit="10", points="37,15 20,32 37,49")
+						rect(x="1" y="1" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="62" height="62")
+
+			a.right#right.nostylelink(href="#static")
+				span.shake-constant.shake.shake-crazy
+					svg(version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve")
+						g
+							polyline(fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="27,15 44,32 27,49")
+						rect(x="1" y="1" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="62" height="62")
+
+
+		.memes
+
+		//- scripts
+		script(src='assets/js/pace.min.js')
+		script(src='assets/js/jquery.min.js')
+		script(src='assets/js/tether.min.js')
+		script(src='assets/js/bootstrap.min.js')
+		script(src='assets/js/main.js')
