@@ -37,24 +37,16 @@ function prevMeme() {
 }
 
 function getMeme() {
-	console.log(currentMeme);
-	// return url;
+	var request = new XMLHttpRequest();
+	var httpurl = 'https://api.imgur.com/3/g/memes/viral/' + Math.floor((Math.random() * 30) + 1);
+	request.open("GET", httpurl, true);
+	request.setRequestHeader('Authorization', 'Client-ID 2eeac4357a889f9')
+	request.send();
+
+	request.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var data = JSON.parse(this.responseText).data[0].link;
+			console.log(data);
+		}
+	};
 }
-
-
-
-
-
-
-
-
-
-var request = new XMLHttpRequest();
-var httpurl = '';
-request.open("GET", httpurl, true);
-
-request.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var data = JSON.parse(this.responseText);
-	}
-};
