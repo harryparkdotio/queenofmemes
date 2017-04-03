@@ -20,7 +20,7 @@ function getMeme() {
 					counter = 0;
 				} else {
 					var id = data.data[counter].cover;
-					$('img.meme').attr('src', 'http://imgur.com/'+id);
+					$('img.meme').attr('src', 'http://imgur.com/'+id+'.jpg');
 					counter++;
 				}
 			});
