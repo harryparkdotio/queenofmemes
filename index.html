@@ -19,9 +19,8 @@ function getMeme() {
 				if (counter > 55) {
 					counter = 0;
 				} else {
-					var id = data.data[counter].link;
-					var width = data.data[counter].width;
-					$('img.meme').attr('src', id);
+					var id = data.data[counter].cover;
+					$('img.meme').attr('src', 'http://imgur.com/'+id);
 					counter++;
 				}
 			});
